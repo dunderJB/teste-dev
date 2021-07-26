@@ -1,0 +1,23 @@
+{
+  "name": "test-dev",
+  "version": "1.0.0",
+  "description": "Test developer PG-Mais",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordan Boaventura",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chokidar": "^3.5.2",
+    "csv-parser": "^3.0.0",
+    "express": "^4.17.1",
+    "line-reader": "^0.4.0",
+    "mysql2": "^2.2.5",
+    "neat-csv": "^6.0.1",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.12",
+    "sequelize": "^6.6.5"
+  }
+}
