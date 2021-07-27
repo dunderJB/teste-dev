@@ -5,6 +5,13 @@ const readline = require('readline');
 const fs = require('fs')
 
 
+
+/**
+ * Salva as linhas do arquivo na base de dados
+ * @param {string} path - diretorio onde se encontra o arquivo valido
+ * @param {string} idFile - Id do arquivo que foi registrado no banco 
+ * @return {string} - Retorna o id do arquivo a qual a linhas pertencem
+ */
 function saveRecords(path, idFile) {
     return new Promise(async (resolve, reject) => {
 
@@ -18,20 +25,23 @@ function saveRecords(path, idFile) {
             let horarioEnvio = hourValidate(register[4]);
             let mensagem = messageValidate(register[5]);
             let clientPhone = register[1] + register[2];
+            let idBroker = brokerValidate(register[3]);
 
             await axios.get('https://front-test-pg.herokuapp.com/blacklist/' + clientPhone)
                 .catch(async () => {
-                    if (celular && horarioEnvio && mensagem) {
-                        await Record.create({
-                            idMensagem: register[0],
-                            ddd: register[1],
-                            celular: register[2],
-                            operadora: register[3],
-                            horarioEnvio: register[4],
-                            mensagem: register[5],
-                            idBroker: brokerValidate(register[3]),
-                            fileId: idFile
-                        });
+                    if(register.length == 6 ){
+                        if (celular && horarioEnvio && mensagem && idBroker) {
+                            await Record.create({
+                                idMensagem: register[0],
+                                ddd: register[1],
+                                celular: register[2],
+                                operadora: register[3],
+                                horarioEnvio: register[4],
+                                mensagem: register[5],
+                                idBroker: idBroker,
+                                fileId: idFile
+                            });
+                        }
                     }
                 });
         }

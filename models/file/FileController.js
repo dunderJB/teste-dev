@@ -7,7 +7,6 @@ function saveFile(path) {
         File.create({
             fileName: fileName,
         }).then( idFile => {
-            console.log('salvando nome do arquivo com id ' + idFile.id);
             resolve(idFile.id);
         });
     });

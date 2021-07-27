@@ -1,6 +1,11 @@
 const validDDD = require('./ddd');
 
-
+/**
+ * Valida DDD e Telefone conforme regra de negocio
+ * @param {string} clientDDD - DDD
+ * @param {string} clientPhone - Telefone 
+ * @return {boolean} - Retorna True para telefones validos
+ */
 function phoneValidate(clientDDD, clientPhone){
 
     let dddValid = false;
@@ -29,6 +34,11 @@ function phoneValidate(clientDDD, clientPhone){
 }
 
 
+/**
+ * Valida se a hora enviada é menor que a hora estipulada dentro da funcao
+ * @param {string} sent_date - Sent_date deve vir no formato hh:mm:ss
+ * @return {boolean} - Retorna True para horas validas
+ */
 function hourValidate(sent_date){
     
     let time = sent_date.split(':');
@@ -47,11 +57,21 @@ function hourValidate(sent_date){
 }
 
 
+/**
+ * Valida o tamanho da string enviada
+ * @param {string} clientMessage - String até 140 caracteres
+ * @return {boolean} - Retorna True mensagens validas
+ */
 function messageValidate(clientMessage){
     return clientMessage.length <= 140 ? true : false;
 }
 
 
+/**
+ * Valida a broker enviada conforme regra de negocio
+ * @param {string} clientBroker - String informando Broker
+ * @return {string}- Retorna o valor correspondente para a broker cadastrada ou False para Broker nao homologada
+ */
 function brokerValidate(clientBroker){
     let oper = clientBroker.toUpperCase();
     let broker = '';
@@ -66,7 +86,7 @@ function brokerValidate(clientBroker){
     case 'NEXTEL':
         return broker = '3'
     default:
-        return broker = ''
+        return broker = false;
     }
 };
 
