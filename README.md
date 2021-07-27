@@ -1,10 +1,11 @@
-# Project Title
+File Exporter V1
 
-Simple overview of use/purpose.
+## Descrição
 
-## Description
+Programa desenvolvido com o intuito de reeber um arquivo base com informações de retorno referentes a cliente, telefones, hora de envio e mensagem, o programa verifica e valida as informações de acordo com as regras de negócio estabelecidas.
 
-An in-depth paragraph about your project and overview of use.
+## Regras
+
 
 ## Getting Started
 
