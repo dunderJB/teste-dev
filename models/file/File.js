@@ -9,6 +9,6 @@ const File = connection.define('files', {
     }
 });
 
-//File.sync({ force:true });
+File.sync();
 
 module.exports = File;

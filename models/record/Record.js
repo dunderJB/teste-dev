@@ -37,7 +37,6 @@ const Record = connection.define('records', {
 File.hasMany(Record, { onDelete: 'cascade', hooks: true });
 Record.belongsTo(File);
 
-
-//Record.sync({ force:true });
+Record.sync();
 
 module.exports = Record;

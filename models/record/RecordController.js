@@ -32,7 +32,6 @@ function saveRecords(path, idFile) {
                             idBroker: brokerValidate(register[3]),
                             fileId: idFile
                         });
-                        console.log("oi")
                     }
                 });
         }
