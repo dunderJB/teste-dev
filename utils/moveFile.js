@@ -2,6 +2,13 @@ const fs = require('fs');
 const p = require( 'path' );
 
 
+/**
+ * Move o arquivo conforme parametros fornecidos
+ * @param {string} msg - pode ser informado uma mensagem para aparecer no console.log
+ * @param {string} status - Status fixo  processedFile ou invalidFile
+ * @param {string} fileName - nome do arquivo que sera movido 
+ * @return {Promise} - Retorna uma promise
+ */
 function moveFile(msg, status, fileName){
     return new Promise((resolve, reject) => {
         let invalidFilePath = p.resolve("invalid_files", fileName);

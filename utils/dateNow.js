@@ -1,4 +1,9 @@
 
+
+/**
+ * Function que pega e formata a data atual
+ * @return {Promise} - Retorna a data Atual no formato yyyyMMdd
+ */
 function today(){
     let data = new Date();
     day  = data.getDate().toString().padStart(2, '0');

@@ -7,7 +7,7 @@ const fs = require('fs')
 
 
 /**
- * Salva as linhas do arquivo na base de dados
+ * Salva as linhas do arquivo na base de dados e cria a relacao do qual arquivo a mesma originou-se
  * @param {string} path - diretorio onde se encontra o arquivo valido
  * @param {string} idFile - Id do arquivo que foi registrado no banco 
  * @return {string} - Retorna o id do arquivo a qual a linhas pertencem

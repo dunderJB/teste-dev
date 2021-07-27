@@ -3,6 +3,12 @@ const p = require( 'path' );
 const fs = require('fs');
 
 
+
+/**
+ * Cria um arquivo de retorno na pasta result_files
+ * @param {array} array - Array, equivalente a cada linha do arquivo que foi gravado
+ * @param {string} idFile - IdFie, id do arquivo que foi gravado na base de dados  
+ */
 function createReturn(array, idFile){
     
     let pathFileResult = p.resolve("result_files\\" + "arquivo_retorno_"+ idFile + "_" + today() + ".txt");

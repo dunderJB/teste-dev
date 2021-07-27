@@ -3,7 +3,7 @@ const p = require( 'path' );
 
 
 /**
- * Verifica e caso precisa criar os diretorios necessarios
+ * Verifica e caso precise criar os diretorios necessarios para monitoramento do arquivos
  */
 function createDir(){
 

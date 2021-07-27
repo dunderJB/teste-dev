@@ -1,4 +1,9 @@
 
+
+
+/**
+ * Array de DDDs validos
+ */
 const validDDD = [
     '21',
     '22',
