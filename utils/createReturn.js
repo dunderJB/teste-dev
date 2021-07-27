@@ -3,7 +3,6 @@ const p = require( 'path' );
 const fs = require('fs');
 
 
-
 /**
  * Cria um arquivo de retorno na pasta result_files
  * @param {array} array - Array, equivalente a cada linha do arquivo que foi gravado
