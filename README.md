@@ -47,7 +47,7 @@ Cada broker será responsável pelo envio de algumas operadoras, representado pe
 
 O projeto utilizou:
 
-- [Node.js][nodejs]
+- [Node.js]
 
 
 ### Dependências
@@ -95,7 +95,7 @@ module.exports = connection;
 npm install package.json
 
 # Executar programa
-node .\app.json
+node app.js
 ```
 
 
